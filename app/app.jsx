@@ -3,12 +3,23 @@ import ReactDOM from 'react-dom'; // Web UI.
 
 import './index.css';
 
+function isLoading() {
+	return false;
+}
+
 class App extends React.Component {
-	render () {
+
+	render() {
+
+		const name = 'Aubrey';
+
 		return (
-			<div>
-				Hello World!
-			</div>
+
+			// Or <React.Fragment>
+			<>
+				<h1>Hello {name}</h1>
+				<p>Hello World</p>
+			</>
 		);
 	}
 }
