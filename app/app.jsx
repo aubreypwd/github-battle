@@ -1,26 +1,26 @@
+
+// React.
 import React from 'react'; // Builds UI, but is agnostic to environment e.g. iOS, etc.
 import ReactDOM from 'react-dom'; // Web UI.
 
+// Styles.
 import './index.css';
 
-function isLoading() {
-	return false;
-}
+// Components.
+import Hello from './Hello.jsx';
 
+/**
+ * Main App
+ */
 class App extends React.Component {
 
 	render() {
 
 		const name = 'Aubrey';
 
-		return (
-
-			// Or <React.Fragment>
-			<>
-				<h1>Hello {name}</h1>
-				<p>Hello World</p>
-			</>
-		);
+		return <>
+			<Hello name={name} />
+		</>
 	}
 }
 
