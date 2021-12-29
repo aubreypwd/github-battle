@@ -1,4 +1,5 @@
 import React from 'react'; // Builds UI, but is agnostic to environment e.g. iOS, etc.
+import PropTypes from 'prop-types';
 
 // Components
 import LanguagesNav from './LanguagesNav.jsx';
@@ -37,3 +38,7 @@ export default class Popular extends React.Component {
 		/>;
 	}
 }
+
+Popular.propTypes = {
+	languages: PropTypes.array.isRequired,
+};

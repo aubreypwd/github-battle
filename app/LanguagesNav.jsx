@@ -1,4 +1,5 @@
 import React from 'react'; // Builds UI, but is agnostic to environment e.g. iOS, etc.
+import PropTypes from 'prop-types';
 
 export default function LanguagesNav( {
 	selectedLanguage,
@@ -39,3 +40,10 @@ export default function LanguagesNav( {
 		</>
 	);
 }
+
+LanguagesNav.propTypes = {
+	selectedLanguage: PropTypes.string.isRequired,
+	languages: PropTypes.array,
+	updateLanguageCallback: PropTypes.func.isRequired,
+	switchLanguagesCallback: PropTypes.func.isRequired,
+};
