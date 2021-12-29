@@ -7,7 +7,7 @@ import ReactDOM from 'react-dom'; // Web UI.
 import './index.css';
 
 // Components.
-// import Hello from './Hello.jsx';
+import Hello from './Hello.jsx';
 // import Tweets from './Tweets.jsx';
 import Popular from './Popular.jsx';
 
@@ -19,6 +19,8 @@ class App extends React.Component {
 	render() {
 		return <>
 			<div className="container">
+				<Hello name="Aubrey" />
+
 				<Popular
 					languages={ [
 						'All',
