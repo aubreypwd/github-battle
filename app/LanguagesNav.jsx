@@ -1,9 +1,14 @@
 import React from 'react'; // Builds UI, but is agnostic to environment e.g. iOS, etc.
 
-export default function LanguagesNav( props ) {
+export default function LanguagesNav( {
+	selectedLanguage,
+	languages,
+	updateLanguageCallback,
+	switchLanguagesCallback
+} ) {
 
 	const color = ( language ) => {
-		return language === props.selectedLanguage
+		return language === selectedLanguage
 			? { color: 'maroon' } // Active Language.
 			: {}; // Not active.
 	}
@@ -12,14 +17,14 @@ export default function LanguagesNav( props ) {
 		<>
 			<ul
 				className="flex-center"
-				onContextMenu={ () => props.switchLanguagesCallback() }>
+				onContextMenu={ () => switchLanguagesCallback() }>
 
-				{ props.languages.map( ( language ) => (
+				{ languages.map( ( language ) => (
 
 					<li key={language}>
 						<button
 							className="btn-clear nav-link"
-							onClick={ () => props.updateLanguageCallback( language ) }
+							onClick={ () => updateLanguageCallback( language ) }
 							style={ color( language ) }
 						>
 
