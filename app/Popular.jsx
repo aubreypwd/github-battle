@@ -11,7 +11,16 @@ export default class Popular extends React.Component {
 		}
 	}
 
-	// Cool arrow function this magic!
+	/**
+	 * If you right-click on the menu below, you can get these.
+	 *
+	 * This shows off how Arrow functions for some reason respect
+	 * how you would expect `this` to work.
+	 *
+	 * @author Aubrey Portwood <aubrey@webdevstudios.com>
+	 * @since  Wednesday, December 29, 2021
+	 * @param  {Object} event Event Object.
+	 */
 	switchLanguages = ( event ) => {
 
 		this.setState( {
