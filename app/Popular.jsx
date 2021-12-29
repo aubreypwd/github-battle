@@ -1,5 +1,8 @@
 import React from 'react'; // Builds UI, but is agnostic to environment e.g. iOS, etc.
 
+// Components
+import LanguagesNav from './LanguagesNav.jsx';
+
 export default class Popular extends React.Component {
 
 	constructor( props ) {
@@ -26,27 +29,11 @@ export default class Popular extends React.Component {
 
 	render() {
 
-		return (
-			<>
-				<ul className="flex-center" onContextMenu={this.switchLanguages}>
-
-					{ this.state.languages.map( ( language ) => (
-
-						<li key={language}>
-							<button
-								className="btn-clear nav-link"
-								onClick={ () => this.updateLanguage( language ) }
-								style={ language === this.state.selectedLanguage
-									? { color: 'maroon' }
-									: {}
-								}
-							>{language}</button>
-						</li>
-
-					) ) }
-
-				</ul>
-			</>
-		);
+		return <LanguagesNav
+			languages={ this.state.languages }
+			selectedLanguage={ this.state.selectedLanguage }
+			updateLanguageCallback={ this.updateLanguage }
+			switchLanguagesCallback={ this.switchLanguages }
+		/>;
 	}
 }
