@@ -19,7 +19,15 @@ class App extends React.Component {
 	render() {
 		return <>
 			<div className="container">
-				<Popular languages={ [ 'All', 'JavaScript', 'Ruby', 'Java', 'CSS', 'Python' ] } />
+				<Popular
+					languages={ [
+						'All',
+						'JavaScript',
+						'Ruby',
+						'Java',
+						'CSS',
+						'Python'
+					] } />
 			</div>
 		</>
 	}
